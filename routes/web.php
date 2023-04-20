@@ -13,14 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    // view - незвание шаблона
-//    // из папки resources шаблон welcom.blade.php
-//    return view('welcome');
-//});
-
 Route::get('/', function () {
     // view - незвание шаблона
     // из папки resources шаблон welcom.blade.php
     return view('index');
+});
+
+Route::get('/categories', function () {
+   return view('categories');
+});
+
+Route::get('/categories/{id}', function () {
+    return view('product');
 });
