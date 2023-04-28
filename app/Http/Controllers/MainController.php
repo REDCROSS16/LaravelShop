@@ -1,8 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
@@ -18,14 +16,16 @@ class MainController extends Controller
 
     public function category(string $category)
     {
-        return view('category', compact('category'));
+        return view('category', \compact('category'));
     }
 
     public function product(string $product = null)
     {
-        return view('product',
-        [
-            'product' => $product
-        ]);
+        return view(
+            'product',
+            [
+            'product' => $product,
+        ]
+        );
     }
 }
