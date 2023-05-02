@@ -20,8 +20,6 @@ class MainController extends Controller
 
     public function category(string $category)
     {
-        $user = User::all();
-        dd($user);
         $category = Categories::query()->where('code', '', $category);
         dd($category);
 
