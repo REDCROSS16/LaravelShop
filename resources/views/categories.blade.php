@@ -66,7 +66,7 @@
             </p>
         </div>
         <div class="panel">
-            <a href="/appliances">
+            <a href="/technics">
                 <img src="http://internet-shop.tmweb.ru/storage/categories/appliance.jpg" alt="product">
                 <h2>Бытовая техника</h2>
             </a>

@@ -19,6 +19,15 @@ hp artisan make:model -m Categories
 
 composer dump-autoload
 
+ЕСли не находит MYSQL в докере то
+DB_CONNECTION=mysql
+DB_HOST=mysql - тут указать имя контейнера для майскл
+DB_PORT=3306
+DB_DATABASE=larashop
+DB_USERNAME=red
+DB_PASSWORD=red
+
+
 
 
 
