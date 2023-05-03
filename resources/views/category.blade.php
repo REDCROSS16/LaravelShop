@@ -49,20 +49,12 @@
 
 <div class="container">
     <div class="starter-template">
-        <h1>
-            {{ $category->name }}
-
-        </h1>
-        <p>
-            В этом разделе вы найдёте самые популярные мобильные телефонамы по отличным ценам!
-        </p>
+        <h1> {{ $category->name }} </h1>
+        <p> {{ $category->description }} </p>
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <div class="labels">
-
-
-                    </div>
+                    <div class="labels"> </div>
                     <img src="http://internet-shop.tmweb.ru/storage/products/iphone_x.jpg" alt="iPhone X 64GB">
                     <div class="caption">
                         <h3>iPhone X 64GB</h3>

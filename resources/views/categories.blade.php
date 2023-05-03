@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет Магазин: Все Категории</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-{{--    <script src="/js/jquery.min.js"></script>--}}
-{{--    <script src="/js/bootstrap.min.js"></script>--}}
-{{--    <link href="/css/bootstrap.min.css" rel="stylesheet">--}}
-{{--    <link href="/css/starter-template.css" rel="stylesheet">--}}
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/starter-template.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -47,34 +47,17 @@
 
 <div class="container">
     <div class="starter-template">
-        <div class="panel">
-            <a href="/mobiles">
-                <img src="http://internet-shop.tmweb.ru/storage/categories/mobile.jpg" alt="product">
-                <h2>Мобильные телефоны</h2>
-            </a>
-            <p>
-                В этом разделе вы найдёте самые популярные мобильные телефонамы по отличным ценам!
-            </p>
-        </div>
-        <div class="panel">
-            <a href="/portable">
-                <img src="http://internet-shop.tmweb.ru/storage/categories/portable.jpg" alt="product">
-                <h2>Портативная техника</h2>
-            </a>
-            <p>
-                Раздел с портативной техникой.
-            </p>
-        </div>
-        <div class="panel">
-            <a href="/technics">
-                <img src="http://internet-shop.tmweb.ru/storage/categories/appliance.jpg" alt="product">
-                <h2>Бытовая техника</h2>
-            </a>
-            <p>
-                Раздел с бытовой техникой
-            </p>
-        </div>
-    </div>
+        @foreach($categories as $category)
+            <div class="panel">
+                <a href="/{{ $category->code }}">
+                    <img src="{{ $category->image }}" alt="product">
+                    <h2>{{ $category->name }}</h2>
+                </a>
+                <p>
+                    {{ $category->description }}
+                </p>
+            </div>
+        @endforeach
 </div>
 </body>
 </html>
