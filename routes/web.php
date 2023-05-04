@@ -3,7 +3,7 @@
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/index', 'MainController@index');
+Route::get('/index', [MainController::class, 'index']);
 
 Route::get('/categories', [MainController::class, 'categories']);
 
