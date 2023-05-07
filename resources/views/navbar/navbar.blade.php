@@ -1,15 +1,15 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/index">Магазин у Никитоса</a>
+            <a class="navbar-brand" href="{{ route('index') }}">Магазин у Никитоса</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/index">Все товары</a></li>
-                <li ><a href="/categories">Категории</a>
+                <li class="active"><a href="{{ route('index') }}">Все товары</a></li>
+                <li ><a href="{{ route('categories') }}">Категории</a>
                 </li>
-                <li ><a href="/basket">В корзину</a></li>
-                <li><a href="/reset">Сбросить проект в начальное состояние</a></li>
+                <li ><a href="{{ route('basket') }}">В корзину / <BASKET></BASKET></a></li>
+                <li><a href="#">Сбросить проект в начальное состояние</a></li>
                 <li><a href="/locale/en">en</a></li>
 
                 <li class="dropdown">

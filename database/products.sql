@@ -1,0 +1,4 @@
+INSERT INTO `products` (`id`, `name`, `code`, `category_id`, `image`, `description`, `price`, `created_at`, `updated_at`) VALUES
+                                                                                                                              (1, 'iPhone X 64GB', 'iphone_x_64', 1, NULL, 'Отличный продвинутый телефон с памятью на 64 gb', 71990, NULL, NULL),
+                                                                                                                              (2, 'iPhone X 256GB', 'iphone_x_256', 1, NULL, 'Отличный продвинутый телефон с памятью на 256 gb', 89990, NULL, NULL),
+                                                                                                                              (3, 'HTC One S', 'htc_one_s', 1, NULL, 'Зачем платить за лишнее? Легендарный HTC One S', 12490, NULL, NULL);
