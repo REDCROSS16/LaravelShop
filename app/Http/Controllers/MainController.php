@@ -28,9 +28,9 @@ class MainController extends Controller
 
 //        $category = Category::where('code', $category)->get();
         $category = Category::where('code', $category)->first();
-        $products = Product::where('category_id', $category->id)->get();
+//        $products = Product::where('category_id', $category->id)->get();
 
-        return view('category', \compact('category', 'products'));
+        return view('category', \compact('category'));
     }
 
     public function product(string $category, string $product = null): View
