@@ -7,7 +7,10 @@
         <h1> {{ $category->name }} </h1>
         <p> {{ $category->description }} </p>
         <div class="row">
-            @include('product/card', ['category' => $category])
+
+            @foreach($products as $product)
+                @include('product/card', ['category' => $category])
+            @endforeach
         </div>
     </div>
 @endsection
