@@ -13,7 +13,7 @@ php artisan migrate
 php artisan make:migration create_products_table
 
 php artisan make:model Product
-hp artisan make:model -m Categories
+hp artisan make:model -m Categories - создать модель с миграцией
 
 composer dump-autoload
 

@@ -35,21 +35,13 @@ class MainController extends Controller
 
     public function product(string $category, string $product = null): View
     {
+
+
         return view(
             'product',
             [
             'product' => $product,
         ]
         );
-    }
-
-    public function basket(): View
-    {
-        return view('basket/basket');
-    }
-
-    public function basketPlace(): View
-    {
-        return view('order');
     }
 }
