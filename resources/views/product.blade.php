@@ -4,11 +4,11 @@
 
 @section('content')
     <div class="starter-template">
-        <h1>{{ $product }}</h1>
-        <h2>Мобильные телефоны</h2>
-        <p>Цена: <b>71990 ₽</b></p>
+        <h1>{{ $product->name }}</h1>
+        <h2>{{ $product->category->name }}</h2>
+        <p>Цена: <b>{{ $product->price }} ₽</b></p>
         <img src="http://internet-shop.tmweb.ru/storage/products/iphone_x.jpg" alt="picture">
-        <p>Отличный продвинутый телефон с памятью на 64 gb</p>
+        <p>{{ $product->description }}</p>
 
         <form action="http://internet-shop.tmweb.ru/basket/add/1" method="POST">
             <button type="submit" class="btn btn-success" role="button">Добавить в корзину</button>
