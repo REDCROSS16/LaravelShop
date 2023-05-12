@@ -16,4 +16,9 @@ class BasketController extends Controller
     {
         return view('order');
     }
+
+    public function  basketAdd()
+    {
+        
+    }
 }
