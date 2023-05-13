@@ -17,8 +17,8 @@ class BasketController extends Controller
         return view('order');
     }
 
-    public function  basketAdd()
+    public function  basketAdd($productId)
     {
-        
+        session('orderId');
     }
 }
