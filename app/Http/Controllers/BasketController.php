@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -19,6 +20,9 @@ class BasketController extends Controller
 
     public function  basketAdd($productId)
     {
-        session('orderId');
+        $orderId = session('orderId');
+        if ($orderId === null) {
+            $orderId = Order::create()->id;
+        }
     }
 }
