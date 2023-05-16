@@ -22,7 +22,12 @@ class BasketController extends Controller
     {
         $orderId = session('orderId');
         if ($orderId === null) {
-            $orderId = Order::create()->id;
+            $order = Order::create();
+            session(['orderId' => $order]);
+        } else {
+            $order = Order::find($orderId);
         }
+
+        $order->products()->attach($productId);
     }
 }
