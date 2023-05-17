@@ -18,7 +18,7 @@ class BasketController extends Controller
         return view('order');
     }
 
-    public function  basketAdd($productId)
+    public function basketAdd($productId): void
     {
         $orderId = session('orderId');
         if ($orderId === null) {
