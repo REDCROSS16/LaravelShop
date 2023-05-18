@@ -10,6 +10,12 @@ class BasketController extends Controller
 {
     public function basket(): View
     {
+        $orderId = session('orderId');
+
+        if ($orderId !== null) {
+
+        }
+
         return view('basket/basket');
     }
 
@@ -18,7 +24,7 @@ class BasketController extends Controller
         return view('order');
     }
 
-    public function basketAdd($productId): void
+    public function basketAdd($productId): View
     {
         $orderId = session('orderId');
         if ($orderId === null) {
@@ -29,5 +35,7 @@ class BasketController extends Controller
         }
 
         $order->products()->attach($productId);
+
+        return view('basket', compact('order'));
     }
 }
