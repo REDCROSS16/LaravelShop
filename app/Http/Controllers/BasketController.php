@@ -12,11 +12,12 @@ class BasketController extends Controller
     {
         $orderId = session('orderId');
 
-        if ($orderId !== null) {
-
+        if (!is_null($orderId)) {
+            # not found exception
+            $order = Order::findOrFail($orderId);
         }
 
-        return view('basket/basket');
+        return view('basket/basket', compact('order'));
     }
 
     public function basketPlace(): View
@@ -24,18 +25,17 @@ class BasketController extends Controller
         return view('order');
     }
 
-    public function basketAdd($productId): View
+    public function basketAdd($productId)
     {
         $orderId = session('orderId');
         if ($orderId === null) {
-            $order = Order::create();
-            session(['orderId' => $order]);
+            $order = Order::create()->id;
+            session(['orderId' => $order->id]);
         } else {
-            $order = Order::find($orderId);
+            $order = Order::find(1);
         }
 
         $order->products()->attach($productId);
-
-        return view('basket', compact('order'));
+        return view('basket/basket', compact('order'));
     }
 }
