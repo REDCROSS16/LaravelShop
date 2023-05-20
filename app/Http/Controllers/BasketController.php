@@ -8,6 +8,7 @@ use Illuminate\View\View;
 
 class BasketController extends Controller
 {
+    # сама корзина с продуктами
     public function basket(): View
     {
         $orderId = session('orderId');
@@ -25,11 +26,12 @@ class BasketController extends Controller
         return view('order');
     }
 
-    public function basketAdd($productId)
+    # добавление продукта в корзину
+    public function basketAdd($productId): view
     {
         $orderId = session('orderId');
         if ($orderId === null) {
-            $order = Order::create()->id;
+            $order = Order::create();
             session(['orderId' => $order->id]);
         } else {
             $order = Order::find(1);
