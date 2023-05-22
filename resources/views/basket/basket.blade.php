@@ -28,10 +28,11 @@
                         </td>
                         <td><span class="badge">1</span>
                             <div class="btn-group form-inline">
-                                <form action="http://internet-shop.tmweb.ru/basket/remove/1" method="POST">
+                                <form action="{{ route('basket-remove', $product) }}" method="POST">
                                     <button type="submit" class="btn btn-danger" href="">
                                         <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                                     </button>
+                                    @csrf
                                 </form>
                                 <form action="{{ route('basket-add', $product) }}" method="POST">
                                     <button type="submit" class="btn btn-success" href="">
