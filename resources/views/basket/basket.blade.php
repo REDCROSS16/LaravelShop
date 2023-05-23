@@ -22,7 +22,7 @@
                     <tr>
                         <td>
                             <a href="{{ route('product', [$product->category->code, $product->code]) }}">
-                                <img height="56px" src="#">
+                                <img height="56px" src="#" alt="{{ $product->name }}">
                                 {{ $product->name }}
                             </a>
                         </td>
@@ -55,7 +55,7 @@
             </table>
             <br>
             <div class="btn-group pull-right" role="group">
-                <a type="button" class="btn btn-success" href="http://internet-shop.tmweb.ru/basket/place">Оформить заказ</a>
+                <a type="button" class="btn btn-success" href="#">Оформить заказ</a>
             </div>
         </div>
     </div>
