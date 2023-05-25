@@ -34,10 +34,17 @@ class BasketController extends Controller
             $order = Order::create();
             session(['orderId' => $order->id]);
         } else {
-            $order = Order::find(1);
+            $order = Order::find($orderId);
         }
-
         $order->products()->attach($productId);
+
         return view('basket/basket', compact('order'));
+    }
+
+    public function basketRemove(int $productId)
+    {
+        if (!$productId) {
+            return false;
+        }
     }
 }
