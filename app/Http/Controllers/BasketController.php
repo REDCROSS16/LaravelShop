@@ -41,10 +41,11 @@ class BasketController extends Controller
         return view('basket/basket', compact('order'));
     }
 
-    public function basketRemove(int $productId)
+    public function basketRemove(int $productId): view
     {
+        $orderId = session('orderId');
         if (!$productId) {
-            return false;
+            return view('basket', compact('order'));
         }
     }
 }
