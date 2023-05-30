@@ -47,5 +47,7 @@ class BasketController extends Controller
         if (!$productId) {
             return view('basket', compact('order'));
         }
+
+        return ;
     }
 }
