@@ -6,7 +6,6 @@
     <div class="starter-template">
         <h1>Все товары</h1>
 
-
         <div class="row">
             @foreach($products as $product)
                 @include('product/card', compact('product'))
