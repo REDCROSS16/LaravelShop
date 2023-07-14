@@ -8,9 +8,9 @@
 </p>
 
 # note
-php artisan migrate
+```php artisan migrate```
 
-php artisan make:migration create_products_table
+```php artisan make:migration create_products_table```
 
 php artisan make:model Product
 hp artisan make:model -m Categories - создать модель с миграцией
