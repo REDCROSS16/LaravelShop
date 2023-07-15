@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# note
+# steps
 ```php artisan migrate```
 
 ```php artisan make:migration create_products_table```
