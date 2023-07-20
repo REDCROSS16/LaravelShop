@@ -30,12 +30,11 @@ class BasketController extends Controller
     public function basketAdd($productId): view
     {
         $orderId = session('orderId');
-        if ($orderId === null) {
-            $order = Order::create();
-            session(['orderId' => $order->id]);
-        } else {
-            $order = Order::find($orderId);
-        }
+
+        ($orderId === null)
+            ? session(['orderId' => Order::create()->id])
+            : $order = Order::find($orderId);
+
         $order->products()->attach($productId);
 
         return redirect()->route('basket');
